@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- IMPORTANT: REPLACE THIS STRING WITH THE NEW NAME YOU'LL GIVE TO THIS APP -->
+    <string name="app_name">University Connect</string>
+
+
+    <!-- IMPORTANT: REPLACE THE STRING BELOW WITH YOUR OWN BANNER UNIT ID YOU'LL GET FROM http://apps.admob.com -->
+    <string name="ADMOB_BANNER_UNIT_ID">ca-app</string>
+
+
+    <string name="search_placeholder">Type and event name</string>
+
+
+</resources>

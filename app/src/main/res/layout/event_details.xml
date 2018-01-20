@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".EventDetails">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/eTitletxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/scrollView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Title..."
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="193dp"
+                android:id="@+id/eEventImg"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/event_image" />
+
+            <TextView
+                android:id="@+id/eDescriptionTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="description..."/>
+
+            <Button
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:text="+ ADD TO CALENDAR"
+                android:id="@+id/addToCalButt"
+                android:layout_below="@+id/scrollView"
+                android:layout_centerHorizontal="true"
+                android:background="@color/accent_material_light"
+                android:textColor="#fff"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:text="SHARE EVENT"
+                android:id="@+id/shareEventButt"
+                android:background="@android:color/holo_blue_dark"
+                android:textColor="#fff"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentStart="false"
+                android:layout_below="@+id/addToCalButt"
+                android:layout_gravity="center_horizontal"
+                android:nestedScrollingEnabled="false" />
+
+            <RelativeLayout
+                android:layout_width="260dp"
+                android:layout_height="2dp"
+                android:layout_below="@+id/scrollView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/accent_material_light"
+                android:layout_marginTop="20dp"
+                android:id="@+id/line">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="260dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/scrollView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/eMonthTxt"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Sep"
+                    android:textAlignment="center"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="01"
+                    android:id="@+id/eDayTxt"
+                    android:textSize="40dp"
+                    android:textAlignment="center"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/eYearTxt"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="2016"
+                    android:textAlignment="center"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="REGISTER NOW"
+                    android:id="@+id/registerButt"
+                    android:background="@android:color/holo_purple"
+                    android:textColor="#fff"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="260dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/accent_material_light"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/scrollView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="DETAILS"
+                android:textColor="#333"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textvi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/details"
+                android:layout_alignStart="@+id/details"
+                android:layout_below="@+id/details"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Start Date:"
+                android:textColor="@color/common_google_signin_btn_text_light_default"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/eEndDateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textvi"
+                android:layout_alignStart="@+id/textvi"
+                android:layout_below="@+id/textvi"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="End Date:"
+                android:textColor="@color/common_google_signin_btn_text_light_default"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/eCostTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/eEndDateTxt"
+                android:layout_alignStart="@+id/eEndDateTxt"
+                android:layout_below="@+id/eEndDateTxt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="COST:"
+                android:textColor="@color/common_google_signin_btn_text_light_default"
+                android:textSize="14sp"
+                />
+
+            <Button
+                android:id="@+id/eWebButt"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:enabled="false"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Website: loading..."
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/common_google_signin_btn_text_light_default"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/scrollView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="VENUE"
+                android:textColor="#333"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/eAddressTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/details"
+                android:layout_alignStart="@+id/details"
+                android:layout_below="@+id/details"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="address"
+                android:textSize="14sp"/>
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/mapWebView"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/openMapsButt"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrollView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_red_light"
+                android:text="OPEN IN GOOGLE MAPS"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/admobBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ADMOB_BANNER_UNIT_ID">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
