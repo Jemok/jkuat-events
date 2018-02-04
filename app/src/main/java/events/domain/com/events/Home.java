@@ -132,9 +132,9 @@ public class Home extends AppCompatActivity {
 
 
         // Init AdMob banner
-        AdView mAdView = (AdView) findViewById(R.id.admobBanner);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+//        AdView mAdView = (AdView) findViewById(R.id.admobBanner);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
 
     } // @end onCreate()
 
@@ -308,7 +308,11 @@ public class Home extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(searchTxt.getWindowToken(), 0);
     }
+    private static final String NOTIFICATION_MSG = "NOTIFICATION MSG";
 
-
-
+    public static Intent makeNotificationIntent(Context context, String msg) {
+        Intent intent = new Intent( context, Home.class );
+        intent.putExtra( NOTIFICATION_MSG, msg );
+        return intent;
+    }
 } //@end

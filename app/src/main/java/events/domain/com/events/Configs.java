@@ -27,8 +27,8 @@ public class Configs extends  Application {
 
 
     // PARSE KEYS ----------------------------------------------------------------------------
-    public static String PARSE_APP_KEY = "TZpy81Eds7ngtGAKOwQTcUSpmAhKpGODRQHmQrWb";
-    public static String PARSE_CLIENT_KEY = "TnHTVAMv4dFZKqO9Lck9P0IesaOABF785SEmwDK3";
+    public static String PARSE_APP_KEY = "8LF22p5roH8dqM8Bh3vEtNSUmXoR6mTh67LjpDOU";
+    public static String PARSE_CLIENT_KEY = "VwhckQJEvbSAunbN9PROTXODfEgkzFD9cLvn7KeW";
 
 
 

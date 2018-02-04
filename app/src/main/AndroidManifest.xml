@@ -56,6 +56,10 @@
         <activity android:name=".EventDetails"/>
         <activity android:name=".SubmitEvent"/>
 
+        android:allowBackup="true">
+        ...
+        <service android:name=".GeofenceTransitionService"/>
+
 
         <!--
          IMPORTANT: Replace "450925296457" with your own GCM Sender Id.

@@ -24,15 +24,6 @@
         android:numColumns="1"
         android:layout_above="@+id/admobBanner"/>
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/admobBanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/ADMOB_BANNER_UNIT_ID"
-        android:layout_above="@+id/linearLayout2"
-        android:layout_centerHorizontal="true">
-    </com.google.android.gms.ads.AdView>
 
     <Button
         android:id="@+id/searchButt"

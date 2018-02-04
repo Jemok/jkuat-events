@@ -23,6 +23,12 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.location.GeofencingClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.GetDataCallback;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
@@ -249,6 +255,9 @@ public class EventDetails extends AppCompatActivity {
             addTxt.setText("Address: " + eventObj.getString(Configs.EVENTS_LOCATION));
 
 
+
+
+
             // Open Address in Google Maps Button
             Button openMapButt = (Button)findViewById(R.id.openMapsButt);
             final String addressStr  = "http://maps.google.co.in/maps?q=" + eventObj.getString(Configs.EVENTS_LOCATION);
@@ -270,19 +279,16 @@ public class EventDetails extends AppCompatActivity {
 
 
         } catch (com.parse.ParseException e) { e.printStackTrace(); }
-
-
-
-        // Init AdMob banner
-        AdView mAdView = (AdView) findViewById(R.id.admobBanner);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        
 
 
 
     } //@end onCreate
 
 
+
+    //added geofencing code
+    private GeofencingClient mGeofencingClient;
 
 
 
