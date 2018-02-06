@@ -4,6 +4,7 @@
 
     <!-- Internet permissions -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -40,6 +41,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBzHUL2HE293ROF-tAVDeuCQZfoYgL0wj4"/>
+
 
         <!-- Home Acitivity -->
         <activity
@@ -56,10 +66,8 @@
         <!-- Other Activities -->
         <activity android:name=".EventDetails"/>
         <activity android:name=".SubmitEvent"/>
-
-        android:allowBackup="true">
-        ...
-        <service android:name=".GeofenceTransitionService"/>
+        <activity android:name=".Map"/>
+        <service android:name=".GeofenceRegistrationService"/>
 
 
         <!--

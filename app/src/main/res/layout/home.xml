@@ -87,7 +87,7 @@
             android:textAllCaps="false"
             android:background="@drawable/tab_submit"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="30dp"
             android:paddingTop="28dp"
             android:text="Submit Event"
             android:textSize="8dp" />
@@ -98,9 +98,21 @@
             android:id="@+id/tab_three"
             android:textAllCaps="false"
             android:background="@drawable/tab_contact"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="10dp"
             android:paddingTop="28dp"
             android:text="Contact"
+            android:textSize="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_four"
+            android:textAllCaps="false"
+            android:background="@drawable/vicinity"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="28dp"
+            android:text="Nearby"
             android:textSize="10dp"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
