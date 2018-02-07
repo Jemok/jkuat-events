@@ -45,7 +45,6 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBzHUL2HE293ROF-tAVDeuCQZfoYgL0wj4"/>
@@ -62,13 +61,11 @@
             </intent-filter>
         </activity>
 
-
         <!-- Other Activities -->
         <activity android:name=".EventDetails"/>
         <activity android:name=".SubmitEvent"/>
         <activity android:name=".Map"/>
-        <service android:name=".GeofenceRegistrationService"/>
-
+        <service android:name=".GeofenceTrasitionService" />
 
         <!--
          IMPORTANT: Replace "450925296457" with your own GCM Sender Id.

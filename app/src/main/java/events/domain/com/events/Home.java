@@ -53,6 +53,15 @@ public class Home extends AppCompatActivity {
     private GoogleApiClient googleApiClient;
     private GoogleMap map;
 
+    private static final String NOTIFICATION_MSG = "NOTIFICATION MSG";
+
+
+    // Create a Intent send by the notification
+    public static Intent makeNotificationIntent(Context context, String msg) {
+        Intent intent = new Intent( context, Home.class );
+        intent.putExtra( NOTIFICATION_MSG, msg );
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
